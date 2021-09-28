@@ -7,7 +7,7 @@
     "build": "rm -rf dist && webpack && cp lib/VJsf.css dist/main.css",
     "prepare": "npm run build",
     "test": "jest",
-    "test-update": "jest --updateSnapshot",
+    "test-update": "jest --updateSnapshot"
   },
   "jest": {
     "moduleFileExtensions": [
