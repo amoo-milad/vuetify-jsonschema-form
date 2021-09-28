@@ -4,18 +4,10 @@
   "description": "Generate forms for the vuetify UI library (vuejs) based on annotated JSON schemas.",
   "main": "dist/main.js",
   "scripts": {
-    "lint": "eslint --ext js,vue .",
-    "lint-fix": "eslint --fix --ext js,vue .",
     "build": "rm -rf dist && webpack && cp lib/VJsf.css dist/main.css",
-    "prepare": "npm run lint && npm test && npm run build && npm run doc-build",
-    "postpublish": "gh-pages-multi deploy -v -s doc/dist -t latest",
+    "prepare": "npm run build",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
-    "dev": "nuxt doc",
-    "doc-dev": "nuxt doc",
-    "doc-start": "nuxt build doc && nuxt start doc",
-    "doc-build": "BASE=/vuetify-jsonschema-form/latest/ nuxt generate doc",
-    "doc-master": "BASE=/vuetify-jsonschema-form/master/ nuxt generate doc && gh-pages-multi deploy -v -s doc/dist -t master"
   },
   "jest": {
     "moduleFileExtensions": [
